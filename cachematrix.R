@@ -1,5 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Invert a matrix
+## the inverted matrix is stored cached on the matrix object 
+## so the inverte will only ble calculated once.
+## assumption: the matrix provided is invertable.
 
 ## This a cached matrix where then inverse of a matrix can be cached for multiple usage.
 makeCacheMatrix <- function(x = matrix()) {
@@ -17,11 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Invert a matrix and cache the resulg. 
+## Invert a matrix and cache the result. 
 ## If the matrix is already solved, the cached result is returned
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-  
   i <- x$getinverse()
   if(!is.null(i)) {
     message("getting cached data")
